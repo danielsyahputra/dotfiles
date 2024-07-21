@@ -4,4 +4,5 @@
 .config/*
 !.config/nvim/
 !.config/alacritty/
+!.config/alacritty/themes
 .config/nvim/lazy-lock.json
