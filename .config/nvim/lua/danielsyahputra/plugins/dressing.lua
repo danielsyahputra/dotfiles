@@ -1,4 +1,5 @@
 return {
-  "stevearc/dressing.nvim",
-  event = "VeryLazy",
+	"folke/snacks.nvim",
+	priority = 1000,
+	lazy = false,
 }
