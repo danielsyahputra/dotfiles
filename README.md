@@ -12,6 +12,8 @@ source ~/.zprofile
 
 ### Install Alacritty
 
+Note: You can also use another terminal such as iTerm, Wezterm, etc
+
 ```
 brew install --cask alacritty
 ```
