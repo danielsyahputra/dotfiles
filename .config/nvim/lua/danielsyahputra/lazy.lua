@@ -23,6 +23,7 @@ require("lazy").setup({
 		{ import = "danielsyahputra.plugins.lsp" },
 		{ import = "danielsyahputra.plugins.misc" },
 		{ import = "danielsyahputra.plugins.db" },
+		{ import = "danielsyahputra.plugins.ai" },
 	},
 	install = { colorscheme = { "habamax" } },
 	checker = { enabled = true, notify = true },
