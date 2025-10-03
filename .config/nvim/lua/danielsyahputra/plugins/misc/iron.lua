@@ -18,7 +18,17 @@ return {
 						format = common.bracketed_paste_python,
 						block_dividers = { "# %%", "#%%" },
 					},
+					javascript = {
+						command = { "node" },
+					},
+					typescript = {
+						command = { "tsx" },
+					},
 				},
+				-- preferred = {
+				-- 	typescript = "ts-node",
+				-- 	javascript = "node",
+				-- },
 				repl_filetype = function(bufnr, ft)
 					return ft
 				end,
