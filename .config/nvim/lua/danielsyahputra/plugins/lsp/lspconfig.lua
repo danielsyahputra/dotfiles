@@ -84,6 +84,20 @@ return {
 			["clangd"] = function()
 				lspconfig["clangd"].setup({})
 			end,
+			["gopls"] = function()
+				lspconfig["gopls"].setup({
+					capabilities = capabilities,
+					settings = {
+						gopls = {
+							analyses = {
+								unusedparams = true,
+							},
+							staticcheck = true,
+							gofumpt = true,
+						},
+					},
+				})
+			end,
 
 			["tsserver"] = function()
 				lspconfig["tsserver"].setup({

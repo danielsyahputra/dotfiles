@@ -29,6 +29,7 @@ return {
 				"pyright",
 				"clangd",
 				"ts_ls",
+				"gopls",
 			},
 		})
 
