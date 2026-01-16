@@ -75,15 +75,20 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+
 			["pyright"] = function()
 				lspconfig["pyright"].setup({
 					capabilities = capabilities,
 					filetypes = { "python" },
 				})
 			end,
+
 			["clangd"] = function()
-				lspconfig["clangd"].setup({})
+				lspconfig.clangd.setup({
+					capabilities = capabilities,
+				})
 			end,
+
 			["gopls"] = function()
 				lspconfig["gopls"].setup({
 					capabilities = capabilities,
@@ -111,6 +116,25 @@ return {
 						"typescript.tsx",
 					},
 					cmd = { "typescript-language-server", "--stdio" },
+				})
+			end,
+
+			["rust_analyzer"] = function()
+				lspconfig.rust_analyzer.setup({
+					capabilities = capabilities,
+					settings = {
+						["rust-analyzer"] = {
+							cargo = {
+								allFeatures = true,
+							},
+							checkOnSave = {
+								command = "clippy",
+							},
+							diagnostics = {
+								enable = true,
+							},
+						},
+					},
 				})
 			end,
 		})
